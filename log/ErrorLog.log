@@ -1,0 +1,57 @@
+2017-05-19 04:56:55,379  ERROR [main] com.infy.dao.InfyAppsDAOImpl [getEligibleAppsAndInstalledApps] - 
+java.lang.NullPointerException
+	at com.infy.dao.InfyAppsDAOImpl.getEligibleAppsAndInstalledApps(InfyAppsDAOImpl.java:44)
+	at com.infy.business.service.InfyAppsServiceImpl.installApps(InfyAppsServiceImpl.java:24)
+	at com.infy.ui.UserInterface.installApps(UserInterface.java:35)
+	at com.infy.ui.UserInterface.main(UserInterface.java:16)
+2017-05-19 04:56:55,398  ERROR [main] com.infy.business.service.InfyAppsServiceImpl [installApps] - 
+java.lang.NullPointerException
+	at com.infy.dao.InfyAppsDAOImpl.getEligibleAppsAndInstalledApps(InfyAppsDAOImpl.java:44)
+	at com.infy.business.service.InfyAppsServiceImpl.installApps(InfyAppsServiceImpl.java:24)
+	at com.infy.ui.UserInterface.installApps(UserInterface.java:35)
+	at com.infy.ui.UserInterface.main(UserInterface.java:16)
+2017-05-19 05:58:14,118  ERROR [main] com.infy.dao.InfyAppsDAOImpl [getDetailsOfMobiles] - Path expected for join! [select  m.IMEINumber,m.mobileOS,m.mobileUserType,m.appsCount from com.infy.entity.MobileEntity m inner join AppEntity a where a.appName=?]
+org.hibernate.hql.internal.ast.QuerySyntaxException: Path expected for join! [select  m.IMEINumber,m.mobileOS,m.mobileUserType,m.appsCount from com.infy.entity.MobileEntity m inner join AppEntity a where a.appName=?]
+	at org.hibernate.hql.internal.ast.QuerySyntaxException.convert(QuerySyntaxException.java:91)
+	at org.hibernate.hql.internal.ast.ErrorCounter.throwQueryException(ErrorCounter.java:109)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:284)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:206)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:158)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:131)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:93)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:167)
+	at org.hibernate.internal.AbstractSessionImpl.getHQLQueryPlan(AbstractSessionImpl.java:301)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:236)
+	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1836)
+	at com.infy.dao.InfyAppsDAOImpl.getDetailsOfMobiles(InfyAppsDAOImpl.java:180)
+	at com.infy.business.service.InfyAppsServiceImpl.getMobilesWithLargestApp(InfyAppsServiceImpl.java:56)
+	at com.infy.ui.UserInterface.getMobilesWithLargestApp(UserInterface.java:55)
+	at com.infy.ui.UserInterface.main(UserInterface.java:17)
+2017-05-19 05:58:14,133  ERROR [main] com.infy.business.service.InfyAppsServiceImpl [getMobilesWithLargestApp] - DAO.TECHNICAL_ERROR
+java.lang.Exception: DAO.TECHNICAL_ERROR
+	at com.infy.dao.InfyAppsDAOImpl.getDetailsOfMobiles(InfyAppsDAOImpl.java:202)
+	at com.infy.business.service.InfyAppsServiceImpl.getMobilesWithLargestApp(InfyAppsServiceImpl.java:56)
+	at com.infy.ui.UserInterface.getMobilesWithLargestApp(UserInterface.java:55)
+	at com.infy.ui.UserInterface.main(UserInterface.java:17)
+2017-05-19 05:59:14,332  ERROR [main] com.infy.business.service.InfyAppsServiceImpl [getMobilesWithLargestApp] - Path expected for join! [select  m.IMEINumber,m.mobileOS,m.mobileUserType,m.appsCount from com.infy.entity.MobileEntity m inner join AppEntity a where a.appName=?]
+org.hibernate.hql.internal.ast.QuerySyntaxException: Path expected for join! [select  m.IMEINumber,m.mobileOS,m.mobileUserType,m.appsCount from com.infy.entity.MobileEntity m inner join AppEntity a where a.appName=?]
+	at org.hibernate.hql.internal.ast.QuerySyntaxException.convert(QuerySyntaxException.java:91)
+	at org.hibernate.hql.internal.ast.ErrorCounter.throwQueryException(ErrorCounter.java:109)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:284)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:206)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:158)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:131)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:93)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:167)
+	at org.hibernate.internal.AbstractSessionImpl.getHQLQueryPlan(AbstractSessionImpl.java:301)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:236)
+	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1836)
+	at com.infy.dao.InfyAppsDAOImpl.getDetailsOfMobiles(InfyAppsDAOImpl.java:180)
+	at com.infy.business.service.InfyAppsServiceImpl.getMobilesWithLargestApp(InfyAppsServiceImpl.java:56)
+	at com.infy.ui.UserInterface.getMobilesWithLargestApp(UserInterface.java:55)
+	at com.infy.ui.UserInterface.main(UserInterface.java:17)
+2017-05-19 06:18:15,310  ERROR [main] com.infy.business.service.InfyAppsServiceImpl [installApps] - Service.NO_APPS_TO_INSTALL
+java.lang.Exception: Service.NO_APPS_TO_INSTALL
+	at com.infy.business.service.InfyAppsServiceImpl.installApps(InfyAppsServiceImpl.java:35)
+	at com.infy.ui.UserInterface.installApps(UserInterface.java:35)
+	at com.infy.ui.UserInterface.main(UserInterface.java:16)
